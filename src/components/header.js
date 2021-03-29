@@ -1,8 +1,10 @@
 
 function header(){
   return(
-    <div classname="headerPadre">
-      <h2>Rick & Morty <span classname="characters">Characters</span></h2>
+    <div className="headerPadre">
+      <h2>Rick & Morty <span className="characters">Characters</span></h2>
     </div>
   );
 }
+
+export default header

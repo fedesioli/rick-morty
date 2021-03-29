@@ -1,20 +1,21 @@
 import React from 'react';
-import Tarjeta from 'tarjetas';
-import fs from 'fs';
-const arrayDePersonajes = fs.readFileSync('../rickandmorty.json');
+import Tarjeta from './tarjetas';
+import arrayDePersonajes from '../rickandmorty.json';
 
 function Body(){
     return(
-        <ul>    
+        <div className='personajesPadre'>    
             {
             arrayDePersonajes.map(function(personaje, idx){
-            <div key={idx}>
+              return(
+            <div  key={idx} className="tarjetaPadre">
                 <Tarjeta datosPersonaje = {personaje} />
             </div>    
+              )  
                 })
             }   
             
-        </ul>   
+        </div>   
     )
 }
 

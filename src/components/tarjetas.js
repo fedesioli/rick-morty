@@ -3,11 +3,12 @@ import React from 'react'
 function Tarjeta(props){
     return(
     <>
-        <img src={props.datosPersonaje.image}></img>
+        <img src={props.datosPersonaje.image} className='imagenTarjeta'></img>
+        <div className='tarjetaHijo'>
         <h3>{props.datosPersonaje.name}</h3>
-        <p>Status: {props.datosPersonaje.status}</p>
-        <p>Species: {props.datosPersonaje.species}</p>
+        <p>{props.datosPersonaje.status} - {props.datosPersonaje.species}</p>
         <p>Origin: {props.datosPersonaje.origin.name}</p>
+        </div>
     </>
     );
 
