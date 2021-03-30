@@ -43,3 +43,16 @@ body{
   padding: 1px;
   width: 100%;
 }
+.footerPadre{
+  background-color: #E0E7FF;
+  text-align: center;
+  margin: 0;
+  height: 120px;
+}
+.footerPadre h2{
+  padding-top: 1%;
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: 2px;
+  font-size: 35px;
+}
