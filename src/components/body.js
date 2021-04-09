@@ -1,30 +1,31 @@
 import React, {Component} from 'react';
 import Tarjeta from './tarjetas';
 import arrayDePersonajes from '../rickandmorty.json';
+import arrayDePersonajesOk from '../rickandmorty.json';
 import { render } from '@testing-library/react';
 
 class Body extends Component{
+    constructor(props){
+        super(props);
+    }
 
-
-    Borrar = () => {arrayDePersonajes.filter(function(personaje){
-        return personaje = null
-    })}
-    Reset = () => {arrayDePersonajes = arrayDePersonajes}
+    borrar = (id) => {console.log(id);}
+    // Reset = () => {arrayDePersonajes = arrayDePersonajesOk}
     
     render(){
 
         return(
             <div className='personajesPadre'>    
                 {
-                arrayDePersonajes.map(function(personaje, idx){
-                  return(
+                arrayDePersonajes.map((personaje)=>(
+                  
                 
-                    <Tarjeta datosPersonaje = {personaje} key={idx} color="white" borrarPersonaje = {borrar}/>
+                    <Tarjeta datosPersonaje = {personaje} key={personaje.id} id={personaje.id} color="white" onBorrar={this.borrar}/>
                     
-                  )  
-                    })
+                    
+                ))
                 }   
-            <button onClick={this.Reset.bind(this)}>Resetear Personajes</button>
+            
             </div>   
         )
     }

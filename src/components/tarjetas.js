@@ -31,6 +31,9 @@ class Tarjeta extends Component{
                 color: "white",
             }) 
     }   
+    borrarTarjeta = ()=>{
+        this.props.onBorrar(this.props.id)
+    }
 
 
     render(){
@@ -45,7 +48,7 @@ class Tarjeta extends Component{
             <p>{this.props.datosPersonaje.status} - {this.props.datosPersonaje.species}</p>
             <p>Origin: {this.props.datosPersonaje.origin.name}</p>
             <button onClick={this.cambiarColorBoton.bind(this)}>Cambiar color</button>
-            <button onClick={this.props.borrarPersonaje.bind(this)}>Borrar</button>
+            <button onClick={this.borrarTarjeta}>Borrar</button>
             </div>
         </div>
         );
