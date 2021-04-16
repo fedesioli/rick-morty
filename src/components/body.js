@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Tarjeta from './tarjetas';
 import arrayDePersonajes from '../rickandmorty.json';
-import arrayDePersonajesOk from '../rickandmorty.json';
 import { render } from '@testing-library/react';
 
 class Body extends Component{

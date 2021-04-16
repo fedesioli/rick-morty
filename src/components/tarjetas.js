@@ -6,19 +6,28 @@ class Tarjeta extends Component{
         super(props);
         this.state = {
             colorOriginal: props.color,              
-            color: "white",
+            
         }
     }
 
     cambiarColorHover(){
+        if(this.state.color === "pink")
+        this.setState({
+            color: "pink",
+        })
+        else
         this.setState({
             color: "lightgray",
         })
     }
     cambiarColorHover2(){
+        if(this.state.color === "pink")
+        this.setState({
+            color: "pink",
+        })
+        else
         this.setState({
             color: "white",
-            
         })
     }
     cambiarColorBoton(){
